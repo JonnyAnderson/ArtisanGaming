@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Be right back.</title>
+        <title>Artisan Gaming - Be right back.</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -40,7 +40,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Artisan Gaming<br/><span style="font-size: 75%;">is down for maintenance.</span></div>
+                <div class="title">Artisan Gaming<br/><span style="font-size: 50%;">is undergoing maintenance.</span></div>
             </div>
         </div>
     </body>
