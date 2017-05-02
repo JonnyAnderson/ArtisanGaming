@@ -40,7 +40,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Artisan Gaming<br/><span style="font-size: 50%;">is undergoing maintenance.</span></div>
+                <div class="title">Artisan Gaming<br/><span style="font-size: 50%;">is coming soon.</span></div>
             </div>
         </div>
     </body>
