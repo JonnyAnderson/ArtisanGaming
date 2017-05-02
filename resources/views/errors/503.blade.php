@@ -40,7 +40,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Artisan Gaming is down for maintenance.</div>
+                <div class="title">Artisan Gaming<br/><span style="font-size: 75%;">is down for maintenance.</span></div>
             </div>
         </div>
     </body>
