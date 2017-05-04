@@ -56,9 +56,6 @@
                     <li><a href="{{ route('maps.game.index', ['game' => 'halo-5']) }}">Halo 5 Maps</a></li>
                     <!--<li><a href="{{ url('/minecraft/builds') }}">Minecraft Builds</a></li>-->
                     <li><a href="{{ route('articles.index') }}">Articles</a></li>
-                    <li><a href="{{ route('lobbies.index') }}">Lobbies</a></li>
-                    <li><a href="{{ route('tournaments.index') }}">Tournaments</a></li>
-                    <li><a href="{{ route('tv.index') }}">TV</a></li>
                     <!--<li><a href="{{ url('/tools') }}">Player Tools</a></li>-->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

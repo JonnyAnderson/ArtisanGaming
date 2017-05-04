@@ -38,6 +38,13 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/', 'HomeController@index')->name('home');
 
 
+
+
+
+
+
+
+
     // Maps...
     Route::post('maps',                     'MapsController@store')->name('maps.store');            // Create a map
     Route::get('maps',                      'MapsController@indexAll')->name('maps.index');         // View all maps
@@ -67,6 +74,11 @@ Route::group(['middleware' => 'web'], function () {
 
 
 
+
+
+
+
+
     // Articles...
     Route::resource('articles', 'ArticlesController', [
         'except' => ['show'], 
@@ -80,11 +92,20 @@ Route::group(['middleware' => 'web'], function () {
 
 
 
+
+
+
+
+
+
     // Lobbies...
     // Route::resource('lobbies/{game}', 'LobbiesController', [
     //     'parameters' => ['{game}' => 'lobby']
     // ]);
     // Route::get('lobbies', 'LobbiesController@index')->name('lobbies.index');
+
+
+/** TEMPORARILY HIDDEN FROM PRODUCTION
 
     Route::post('lobbies',                      'LobbiesController@store')->name('lobbies.store');              // Create a lobby
     Route::get('lobbies',                       'LobbiesController@index')->name('lobbies.index');              // View all lobbies
@@ -99,14 +120,30 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('lobbies/{game}/{lobby}/end',    'LobbiesController@end')->name('lobbies.end');                  // End/Finish a lobby
 
 
+*/
 
 
 
 
+
+
+
+
+
+
+
+
+
+/** TEMPORARILY HIDDEN FROM PRODUCTION
 
     // Tv...
     Route::get('tv',                            'TvController@index')->name('tv.index');                        // View TV homepage
     Route::get('tv/{team}',                     'TvController@show')->name('tv.team.index');                    // View TV for a specific team
+
+*/
+
+
+
 
 
 
@@ -124,6 +161,14 @@ Route::group(['middleware' => 'web'], function () {
 
 
 
+
+
+
+
+
+
+/** TEMPORARILY HIDDEN FROM PRODUCTION
+
     // Tournaments...
     // Route::resource('tournaments/{game}', 'TournamentsController', [
     //     'parameters' => ['{game}' => 'tournament']
@@ -139,7 +184,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('tournaments/{tournament}/edit',          'TournamentsController@edit')->name('tournaments.edit');              // View form to edit tournament
     Route::get('tournaments/{game}/{tournament}',        'TournamentsController@show')->name('tournaments.show');              // View a tournament
 
-
+*/
 
 
 
