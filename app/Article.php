@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Helpers;
+use App\User;
 
 class Article extends Model
 {
@@ -37,6 +38,18 @@ class Article extends Model
 		$updatedAtHumanReadable = date('F jS, Y', strtotime($this->updated_at));
 
 		return $updatedAtHumanReadable;
+	}
+
+	public function created_at_human()
+	{
+		$createdAtHumanReadable = date('F jS, Y', strtotime($this->created_at));
+
+		return $createdAtHumanReadable;
+	}
+
+	public function author()
+	{
+		return $this->belongsTo('App\User', 'user_id', 'id');
 	}
 
 }

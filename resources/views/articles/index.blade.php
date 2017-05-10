@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-md-9">
                     <h3><a href="{{ route('articles.show', ['article' => $article->id, 'slug' => $article->slug]) }}">{{ $article->title }}</a></h3>
-                    <h6><a href="{{ route('users.show', ['user' => $article->author]) }}">Author: {{ $article->author }}</a></h6>
+                    <h6>Author: <a href="{{ route('users.show', ['user' => $article->author->name]) }}">{{ $article->author->name }}</a></h6>
                     <p>
                         {{ $article->brief }}
                     </p>

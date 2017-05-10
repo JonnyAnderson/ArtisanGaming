@@ -86,7 +86,9 @@ class ArticlesController extends Controller
 
     public function store(ArticleRequest $request)
     {
-    	$article = Article::create($request->all());
+        $article = new Article($request->all());
+
+        \Auth::user()->articles()->save($article);
     	
     	// return redirect('articles/' . $article->slug . '/' . $article->id);
         return redirect(route('articles.edit', ['article' => $article->id]));

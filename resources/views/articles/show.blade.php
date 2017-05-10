@@ -24,19 +24,33 @@
                 @endif
             @endif
             </h1>
-            <p>
-            	{{ $article->brief }}
-            </p>
+            
+            @include('users._mini', ['profile' => $article->author])
+
+            <div class="row">
+                <div class="col-md-12">
+                    {{ $article->created_at_human() }}
+                    @if ($article->created_at_human() != $article->updated_at_human())
+                    (updated: {{ $article->updated_at_human() }})
+                    @endif
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
             @if (isSet($article->images[0]))
             <img src="{{ $article->images[0]->path }}" alt="{{ $article->title }}" class="img-responsive img-rounded">
             @endif
-            <p>
-                Author: Artisan<br />
-                Last Updated: {{ $article->updated_at_human() }}
-            </p>
             <hr />
             <p>
             	{{ $article->body }}
+            </p>
+        </div>
+        <div class="col-md-3">
+            <p>
+                {{ $article->brief }}
             </p>
         </div>
     </div>

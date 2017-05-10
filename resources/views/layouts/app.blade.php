@@ -145,7 +145,7 @@
                 <div class="col-md-6">
                     <div class="footerBlock">
                         <img src="" alt="" id="footerLogo">
-                        <p>I built this website out of my love for gaming and I hope it serves the community well. I've devoted countless hours to the development of my maps, writing articles, and programming the tools here. I hope to keep my website ad-free, so if you enjoy the content, please consider <a href="http://streamtip.com/t/rogueartisan">leaving a tip</a> to show your appreciation.</p>
+                        <p>I built this website out of my love for gaming and I hope it serves the community well. I've devoted countless hours to the development of my maps, writing articles, and programming the tools here. I hope to keep my website ad-free, so if you enjoy the content, you may <a href="http://streamtip.com/t/rogueartisan">leave a tip</a> to show your appreciation.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -176,7 +176,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    Copyright © 2016 Artisan Gaming / All rights reserved.
+                    Copyright © 2017 Artisan Gaming / All rights reserved.
                 </div>
             </div>
         </div>

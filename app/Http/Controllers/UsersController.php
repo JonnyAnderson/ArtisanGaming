@@ -16,9 +16,9 @@ class UsersController extends Controller
 
 
 
-    public function show(User $user)
+    public function show($name)
     {
-    	$profile = $user; // Prevents "$user" being used twice in views. The "$user" variable is reserved for the logged in user.
-    	return view('users.show', compact('profile'));
+        $profile = User::where('name', $name)->firstOrFail();
+        return view('users.show', compact('profile'));
     }
 }

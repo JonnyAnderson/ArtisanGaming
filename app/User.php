@@ -15,7 +15,7 @@ class User extends Authenticatable
         'name',
         'gamertag',
         'email',
-        'password'
+        'password' 
     ];
 
     /**
@@ -51,5 +51,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Lobby');
     }
 
+
+    public function articles()
+    {
+        return $this->hasMany('App\Article');
+    }
 
 }
