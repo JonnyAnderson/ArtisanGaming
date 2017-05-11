@@ -79,9 +79,9 @@
     </div>
     <div class="col-md-3">
         <div class="list-group">
-            <a href="{{ $map->download_url }}" class="list-group-item">Download {{ $map->title }} <span class="badge"><i class="fa fa-download" aria-hidden="true"></i></span></a>
-            <a href="https://twitter.com/intent/tweet?button_hashtag=RTSN Check out {{ $map->title }} by @ArtisanGaming... {{ route('maps.show', ['game' => $map->game->slug, 'map' => $map->id, 'slug' => $map->slug]) }}" class="list-group-item" data-show-count="false">Tweet about {{ $map->title }} <span class="badge"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
-            <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false" class="list-group-item">Submit to Reddit <span class="badge"><i class="fa fa-reddit" aria-hidden="true"></i></span></a>
+            <a href="{{ $map->download_url }}" target="_blank" class="list-group-item">Download {{ $map->title }} <span class="badge"><i class="fa fa-download" aria-hidden="true"></i></span></a>
+            <a href="https://twitter.com/intent/tweet?button_hashtag=RTSN Check out {{ $map->title }} by @ArtisanGaming... {{ route('maps.show', ['game' => $map->game->slug, 'map' => $map->id, 'slug' => $map->slug]) }}"target="_blank"  class="list-group-item" data-show-count="false">Tweet about {{ $map->title }} <span class="badge"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+            <a href="//www.reddit.com/submit?url={{ route('maps.show', ['game' => $map->game->slug, 'map' => $map->id, 'slug' => $map->slug]) }}" target="_blank" class="list-group-item">Submit to Reddit <span class="badge"><i class="fa fa-reddit" aria-hidden="true"></i></span></a>
         </div>
     </div>
 

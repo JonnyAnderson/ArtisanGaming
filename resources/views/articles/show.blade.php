@@ -13,29 +13,26 @@
             </span>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">    
-            <h1>{{ $article->title }}
-            @if ($signedIn)
-                @if ($user->isManager())
-                    <span class="small"><a href="{{ route('articles.edit', ['article' => $article->id]) }}">
-                        edit article
-                    </a></span>
-                @endif
-            @endif
-            </h1>
-            
-            @include('users._mini', ['profile' => $article->author])
-
+    <div class="row" style="margin-bottom: 20px;">
+        <div class="col-md-12">
             <div class="row">
-                <div class="col-md-12">
-                    {{ $article->created_at_human() }}
-                    @if ($article->created_at_human() != $article->updated_at_human())
-                    (updated: {{ $article->updated_at_human() }})
+                <div class="col-md-12">   
+                    <h1>{{ $article->title }}
+                    @if ($signedIn)
+                        @if ($user->isManager())
+                            <span class="small"><a href="{{ route('articles.edit', ['article' => $article->id]) }}">
+                                edit article
+                            </a></span>
+                        @endif
                     @endif
+                    </h1>
                 </div>
             </div>
-            
+            <div class="row" style="margin-left: 20px;">
+                <div class="col-md-12">
+                    @include('users._mini', ['profile' => $article->author])
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -49,9 +46,22 @@
             </p>
         </div>
         <div class="col-md-3">
-            <p>
-                {{ $article->brief }}
-            </p>
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col-md-12">
+                    <strong>Published:</strong> {{ $article->created_at_human() }}
+                    @if ($article->created_at_human() != $article->updated_at_human())
+                    <br />
+                    <strong>Last Updated:</strong> {{ $article->updated_at_human() }})
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        {{ $article->brief }}
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

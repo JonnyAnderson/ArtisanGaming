@@ -46,8 +46,8 @@
                     </a>
                 </div>
                 <div class="col-md-9">
+                    @include('users._mini', ['profile' => $article->author])
                     <h3><a href="{{ route('articles.show', ['article' => $article->id, 'slug' => $article->slug]) }}">{{ $article->title }}</a></h3>
-                    <h6>Author: <a href="{{ route('users.show', ['user' => $article->author->name]) }}">{{ $article->author->name }}</a></h6>
                     <p>
                         {{ $article->brief }}
                     </p>
